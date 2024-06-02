@@ -92,7 +92,7 @@ document.addEventListener('keydown', (e)=>{
         percent++;
         monster.style.width = percent + 'px';
         monster.style.height = percent + 'px';
-        if (percent > 350) {
+        if (percent > 300) {
           clearInterval(sizeUp)
           percent = 200;
           setTimeout(()=>{
