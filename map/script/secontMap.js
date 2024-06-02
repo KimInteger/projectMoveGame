@@ -5,6 +5,13 @@ const fourth = document.getElementById('fourth');
 const fifth = document.getElementById('fifth');
 const sixth = document.getElementById('sixth');
 
+
+let monster = fifth.children[0];
+monster.style.position = 'relative';
+monster.style.zIndex = '2';
+
+let crown = sixth.children[0];
+
 let player = document.createElement('div');
 player.style.width = '50px';
 player.style.height = '50px';
@@ -14,6 +21,8 @@ player.style.backgroundColor = 'black'
 first.appendChild(player);
 
 let nextStage
+
+let percent = 200;
 
 function openWindow(){
   nextStage = window.open("../map/thirdMap.html",'_self');
@@ -27,13 +36,11 @@ document.addEventListener('keydown', (e)=>{
   player.style.height = '50px';
   player.style.border = '1px solid white';
   player.style.backgroundColor = 'black'
+  player.style.position = 'absolute';
   if(key === 'ArrowLeft'){
     if(third.children.length === 1){
       third.textContent = '';
       fourth.appendChild(player);  
-    } else if (fifth.children.length ===1) {
-      fifth.textContent = '';
-      third.appendChild(player);
     } else {
       alert('움직일 수 없는 타일입니다!');
     }
@@ -46,8 +53,20 @@ document.addEventListener('keydown', (e)=>{
       third.appendChild(player);
     } else if (third.children.length === 1) {
       third.textContent = '';
-      sixth.appendChild(player);
-      openWindow();
+      crown.style.visibility = 'visible';
+      // setinterval을 걸고. 사이즈를 올리고 줄였다가 원래크기로 돌아오면, 
+      let sizeUp = setInterval(()=>{
+        percent++;
+        crown.style.width = percent + 'px';
+        crown.style.height = percent + 'px';
+        if (percent > 350) {
+          clearInterval(sizeUp)
+          percent = 200;
+          setTimeout(()=>{
+            openWindow();
+          },2000);
+        }
+    },16);
     } else {
       alert("움직일 수 없는 타일입니다!");
     }
@@ -67,7 +86,23 @@ document.addEventListener('keydown', (e)=>{
       third.appendChild(player);  
     } else if (third.children.length === 1) {
       third.textContent = '';
-      fifth.appendChild(player);
+      monster.style.visibility = 'visible';
+      // setinterval을 걸고. 사이즈를 올리고 줄였다가 원래크기로 돌아오면, 
+      let sizeUp = setInterval(()=>{
+        percent++;
+        monster.style.width = percent + 'px';
+        monster.style.height = percent + 'px';
+        if (percent > 350) {
+          clearInterval(sizeUp)
+          percent = 200;
+          setTimeout(()=>{
+            monster.style.visibility = 'hidden';
+            monster.style.width = '200px';
+            monster.style.height = '200px';
+            first.appendChild(player);
+          },1000);
+        }
+    },16);
     } else {
       alert('움직일 수 없는 타일입니다!');
     }
