@@ -28,7 +28,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js && tsc"
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production",
+    "start": "go run backend/main.go"
   },
   "repository": {
     "type": "git",
