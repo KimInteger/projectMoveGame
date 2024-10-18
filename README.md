@@ -1,4 +1,3 @@
-````md
 # 프로젝트: 리팩토링 및 키보드 이벤트 핸들링
 
 ## 개요
@@ -38,11 +37,11 @@
 ## 설치 및 실행
 
 1. **프로젝트 클론**
+
    ```bash
    git clone https://github.com/your-repo/your-project.git
    cd your-project
    ```
-````
 
 2. **의존성 설치**
 
