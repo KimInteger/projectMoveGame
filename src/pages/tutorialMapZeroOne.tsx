@@ -3,14 +3,10 @@ import TutorialMap from '../ui/basicMapTemplate/tutorialTemplate';
 import nextStage from '../lib/mapFunc/mapFuncNextStage';
 
 const TutorialZeroOne = () => {
+  const nextRoute = nextStage('/tutoZeroTwo');
   return (
     <>
-      <TutorialMap
-        title="튜토리얼 1"
-        routeFunc={() => {
-          nextStage('/tutoZeroTwo');
-        }}
-      >
+      <TutorialMap title="튜토리얼 1" routeFunc={nextRoute}>
         <p>
           안녕 여긴 튜토리얼 1이란다. 조선의 궁궐에 당도한 것을 환영하오
           나썬이여
