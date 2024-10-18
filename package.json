@@ -1,0 +1,45 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.25.8",
+    "@babel/preset-env": "^7.25.8",
+    "@babel/preset-react": "^7.25.7",
+    "@babel/preset-typescript": "^7.25.7",
+    "@types/node": "^22.7.6",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.2",
+    "prettier": "^3.3.3",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.3",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "name": "projectmovegame",
+  "version": "1.0.0",
+  "description": "find Crown",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KimInteger/projectMoveGame.git"
+  },
+  "keywords": [
+    "practice"
+  ],
+  "author": "KimJeongSoo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KimInteger/projectMoveGame/issues"
+  },
+  "homepage": "https://github.com/KimInteger/projectMoveGame#readme"
+}
