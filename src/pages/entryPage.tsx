@@ -4,11 +4,9 @@ const EntryPage = () => {
   return (
     <>
       <div>
-        <h1></h1>
-        <h2></h2>
+        <h1>Game Entry Page</h1>
         <div>
-          <button></button>
-          <button></button>
+          <button onClick={}>Start</button>
         </div>
       </div>
     </>
