@@ -1,4 +1,5 @@
 import React from 'react';
+import nextStage from '../lib/mapFunc/mapFuncNextStage';
 
 const EntryPage = () => {
   return (
@@ -6,7 +7,13 @@ const EntryPage = () => {
       <div>
         <h1>Game Entry Page</h1>
         <div>
-          <button onClick={}>Start</button>
+          <button
+            onClick={() => {
+              nextStage('/tutoZeroOne');
+            }}
+          >
+            Start
+          </button>
         </div>
       </div>
     </>
