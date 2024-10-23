@@ -1,8 +1,12 @@
 import React from 'react';
 import TutorialMap from '../ui/basicMapTemplate/tutorialTemplate';
 import nextStage from '../lib/mapFunc/mapFuncNextStage';
+import { gridAreas } from '../static/basicMapGridArea/staticBasicMapAreas';
+import BasicMapTemplate from '../ui/basicMapTemplate/basicMap';
 
 const TutorialZeroTwo = () => {
+  const area = gridAreas.second;
+
   return (
     <>
       <TutorialMap title="튜토리얼 2" routeFunc={nextStage('/tutoZeroThree')}>
@@ -11,6 +15,7 @@ const TutorialZeroTwo = () => {
           나썬이여
         </p>
       </TutorialMap>
+      <BasicMapTemplate areas={area} />
     </>
   );
 };
