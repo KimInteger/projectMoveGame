@@ -14,7 +14,7 @@ const TutorialZeroOne = () => {
           나썬이여
         </p>
       </TutorialMap>
-      <BasicMapTemplate areas={area} />
+      <BasicMapTemplate areas={area} player={area[0]} />
     </>
   );
 };
