@@ -4,9 +4,11 @@ import { BasicMapBlockProps } from '../../interface/interfaceMap/basicMapBlockPr
 import { useTheme } from '../../state/themeContext';
 import Player from '../player/playerComponent';
 
-const BasicMapBlock: React.FC<
-  BasicMapBlockProps & { playerArea: string; onReachTarget: () => void }
-> = ({ area, playerArea, onReachTarget }) => {
+const BasicMapBlock: React.FC<BasicMapBlockProps> = ({
+  area,
+  playerArea,
+  onReachTarget,
+}) => {
   const { theme } = useTheme();
 
   return (

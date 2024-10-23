@@ -2,7 +2,6 @@ import React from 'react';
 import { BasicMapInterface } from '../../interface/interfaceMap/basicMapInterface';
 import '../../style/basicMap.css';
 import BasicMapBlock from '../basicMapComponent/basicMapBlock';
-import { gridAreas } from '../../static/basicMapGridArea/staticBasicMapAreas';
 
 const BasicMapTemplate: React.FC<BasicMapInterface> = ({ areas, player }) => {
   const handleReachTarget = () => {
